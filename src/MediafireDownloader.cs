@@ -81,6 +81,12 @@ namespace Mediafire
             AssignDownloadInfo(url, destFilename, webClient, webClientDenugging).DownloadFileAsync(new Uri(GetMediafireDDL(url)), destFilename);
         }        
         
+        /// <summary>
+        /// Downloads a Mediafire link directly to the destPath using a webclient
+        /// </summary>
+        /// <param name="url">Mediafire url</param>
+        /// <param name="destFilename">destination file name</param>
+        /// <param name="webClient">put your custom webclient here, leave null to use default webclient</param>
         public static void DownloadMediafireFile(string url, string destFilename, WebClient webClient = null)
         {
             AssignDownloadInfo(url, destFilename, webClient).DownloadFile(new Uri(GetMediafireDDL(url)), destFilename);
