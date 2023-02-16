@@ -5,6 +5,9 @@
 # MediafireDownloader
 A small dll that lets you download files from mediafire, it uses HtmlAgilityPack to retrieve the ddl link.
 
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/Glumboi/MediafireDownloader/packages" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-package" aria-label="Install this package Glumboi/MediafireDownloader on GitHub">Install this package</a>
+
 # Code Examples:
 ___
 ## Simple console app using this dll
