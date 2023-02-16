@@ -32,7 +32,7 @@ ___
         }
     }
 
-    internal static class ConsoleExt
+    internal class ConsoleExt
     {
         public static void WriteLineColored(string text, ConsoleColor color)
         {
