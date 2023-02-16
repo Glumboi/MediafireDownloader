@@ -7,8 +7,8 @@ A small dll that lets you download files from mediafire, it uses HtmlAgilityPack
 
 # Code Examples:
 ___
-<div align="left">
 ## Simple console app using this dll
+<div align="left">
 ```c#
     internal class Program
     {
