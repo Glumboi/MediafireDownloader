@@ -1,5 +1,6 @@
 <div align="center">
-<img src="https://i.imgur.com/S806vLi.png" width="312" height="156" />
+<img src="" width="312" height="156" />
+![alt text](https://i.imgur.com/S806vLi.png)
 <div align="left">
 
 # MediafireDownloader
