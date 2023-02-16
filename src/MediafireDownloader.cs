@@ -23,7 +23,7 @@ namespace Mediafire
         private static WebClient client = new WebClient();
         private static readonly Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
         
-        #endregion
+        #endregion Private variables
 
 
         /// <summary>
