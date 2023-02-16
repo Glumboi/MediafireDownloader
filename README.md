@@ -1,5 +1,3 @@
-<div align="center">
-
 <img src="https://i.imgur.com/S806vLi.png" width="312" height="156" />
 
 # MediafireDownloader
@@ -8,7 +6,6 @@ A small dll that lets you download files from mediafire, it uses HtmlAgilityPack
 # Code Examples:
 ___
 ## Simple console app using this dll
-<div align="left">
 ```c#
     internal class Program
     {
