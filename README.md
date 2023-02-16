@@ -1,7 +1,6 @@
-<div align="center">
-<img src="" width="312" height="156" />
+
 ![alt text](https://i.imgur.com/S806vLi.png)
-<div align="left">
+
 
 # MediafireDownloader
 A small dll that lets you download files from mediafire, it uses HtmlAgilityPack to retrieve the ddl link.
