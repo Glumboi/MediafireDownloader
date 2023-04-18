@@ -4,10 +4,30 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>MediaFireDownloader</PackageId>
+        <Version>2.0.0</Version>
+        <Title>MediaFireDownloader</Title>
+        <Authors>Glumboi</Authors>
+        <Description>A simple tool to download MediaFire Files in C#, using .NET 7.0 and thje HTMLAgilityPack</Description>
+        <Copyright>Glumboi (c) 2023</Copyright>
+        <PackageProjectUrl>https://github.com/Glumboi/MediafireDownloader</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Glumboi/MediafireDownloader/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageIcon>68747470733a2f2f692e696d6775722e636f6d2f53383036764c692e706e67.png</PackageIcon>
+        <RepositoryUrl>https://github.com/Glumboi/MediafireDownloader</RepositoryUrl>
+        <PackageTags>MediaFire</PackageTags>
+        <PackageReleaseNotes>- Migrated to .net core
+- Added the ability to dispose</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="68747470733a2f2f692e696d6775722e636f6d2f53383036764c692e706e67.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

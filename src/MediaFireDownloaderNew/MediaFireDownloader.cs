@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.Net;
 using HtmlAgilityPack;
 
-namespace Mediafire
-{
+namespace MediaFireDownloaderNew;
+
     public class MediaFireDownloader : IMediaFireDownloader
     {
         #region Properties
@@ -151,4 +149,3 @@ namespace Mediafire
             _client.Dispose();
         }
     }
-}
