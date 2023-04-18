@@ -12,21 +12,25 @@ namespace Mediafire
     {
         #region Properties
         
-        public static string DownloadingURL => _downloadingUrl;
-        public static string DestinationPath => _destinationPath;
+        public string DownloadingURL => _downloadingUrl;
+        public string DestinationPath => _destinationPath;
 
         #endregion Properties
 
         #region Private variables
         
-        private static string _downloadingUrl;
-        private static string _destinationPath;
-        private static WebClient _client = new WebClient();
-        private static readonly Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
+        private string _downloadingUrl;
+        private string _destinationPath;
+        private WebClient _client = new WebClient();
+        private readonly Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
         
         #endregion
         
-        public MediaFireDownloader(WebClient client)
+        /// <summary>
+        /// Creates a new instance of a MediaFireDownloader, leave client null to use the default client
+        /// </summary>
+        /// <param name="client">client responsible for downloading a file</param>
+        public MediaFireDownloader(WebClient client = null)
         {
             if (client != null)
             {
@@ -34,16 +38,16 @@ namespace Mediafire
                 return;
             }
             
-            client.DownloadProgressChanged += ClientOnDownloadProgressChanged;
-            client.DownloadFileCompleted += ClientOnDownloadFileCompleted;
+            _client.DownloadProgressChanged += ClientOnDownloadProgressChanged;
+            _client.DownloadFileCompleted += ClientOnDownloadFileCompleted;
         }
 
-        public virtual void ClientOnDownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        private void ClientOnDownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            throw new NotImplementedException();
+            _stopWatch.Reset();
         }
 
-        public virtual void ClientOnDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        private void ClientOnDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             double bytesIn = double.Parse(e.BytesReceived.ToString());
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
@@ -134,6 +138,17 @@ namespace Mediafire
             _stopWatch.Start();
 
             return _client;
+        }
+
+        ~MediaFireDownloader()
+        {
+            Dispose();
+        }
+        
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+            _client.Dispose();
         }
     }
 }

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediafireDownloader", "MediafireDownloader.csproj", "{84A3B2BD-E563-409A-976E-B4464013ACE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadTester", "DownloadTester\DownloadTester.csproj", "{57A886C7-CEE5-4B57-A83D-58831452DC60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaFireDownloaderNew", "MediaFireDownloaderNew\MediaFireDownloaderNew.csproj", "{B263D81D-9A57-4C3A-B216-E573EABAE485}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{84A3B2BD-E563-409A-976E-B4464013ACE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84A3B2BD-E563-409A-976E-B4464013ACE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84A3B2BD-E563-409A-976E-B4464013ACE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A886C7-CEE5-4B57-A83D-58831452DC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A886C7-CEE5-4B57-A83D-58831452DC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A886C7-CEE5-4B57-A83D-58831452DC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A886C7-CEE5-4B57-A83D-58831452DC60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B263D81D-9A57-4C3A-B216-E573EABAE485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B263D81D-9A57-4C3A-B216-E573EABAE485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B263D81D-9A57-4C3A-B216-E573EABAE485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B263D81D-9A57-4C3A-B216-E573EABAE485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
