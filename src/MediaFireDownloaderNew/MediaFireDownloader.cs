@@ -88,12 +88,18 @@ namespace MediaFireDownloaderNew;
 
         public void Download(string url, string destFilename, WebClient webClient = null)
         {
-            AssignDownloadInfo(url, destFilename).DownloadFile(new Uri(ConvertMediaFireToDirectDownload(url)), destFilename);
+            using (WebClient client = AssignDownloadInfo(url, destFilename))
+            {
+                client.DownloadFile(new Uri(ConvertMediaFireToDirectDownload(url)), destFilename);
+            }
         }
 
         public void DownloadAsync(string url, string destFilename, WebClient webClient = null, bool webClientDenugging = false)
         {
-            AssignDownloadInfo(url, destFilename).DownloadFileAsync(new Uri(ConvertMediaFireToDirectDownload(url)), destFilename);
+            using (WebClient client = AssignDownloadInfo(url, destFilename))
+            {
+                client.DownloadFileAsync(new Uri(ConvertMediaFireToDirectDownload(url)), destFilename);
+            }
         }
 
         public string ConvertMediaFireToDirectDownload(string sourceURL, string startOfDownloadHref = "https://download")
